@@ -2,6 +2,7 @@
 
 The Easyduino project is an effort to easily dive into different PCB designs of the most popular microcontroller devboards like **Arduino, ESP32, Raspberry Pico and STM32 Bluepill** (more to come!). Using the free and Open Source Software [KiCad](https://www.kicad.org/) and adhering the best practices across the PCB and KiCad ecosystem. Also adding the much needed USB-C support!
 
+All the boards have been sent to production, tested, and verified to ensure everything works correctly.
 
 <p align="center">
     <img src="https://github.com/Hanqaqa/Easyduino/blob/master/Assets/Isometric%20Photos/Collage_easyduino.jpg" width="60%">
@@ -27,7 +28,7 @@ The outline, pinout, layout and components have been tried to be replicated with
 
 Some boards, like the Raspberry Pi Pico use 01005 components which are too expensive for the manufacturer to integrate in the PCB Aseembly line. Some other components like the original Arduino UNO USB to Serial converter, an Atmega16u2, were hard to come by during the development of this project ~January 2023, so more readily available options were chosen. All the differences with the original boards are explained inside the folder of each project in a readme file. 
 
-4 layers of copper have been used in all projects to simplify the wiring. Specifically the [JLC04161H-7628](https://jlcpcb.com/impedance) stackup. 
+4 layers of copper have been used in all projects to simplify the wiring and improve overall signal integrity. The additional layers provide better reference planes, lower return-path impedance, reduced crosstalk, and improved high-frequency performance. Specifically the [JLC04161H-7628](https://jlcpcb.com/impedance) stackup. 
 
 The PCB constraints of the manufacturer JLCPCB are explained [here](https://github.com/Hanqaqa/Easyduino/tree/master/Assets/JLCPCB%20Constraints)
 
@@ -65,9 +66,9 @@ If you plan on developing any other development boards and wish to merge into th
 
 To do list:
 
-- [ ] ~~Order and test the v1.1 RP2040 board. (In v1.0 I mixed some pins in the Flash and couldn't boot up). Ordered. Awaiting arrival. v1.1 is working correctly. Need to update photos and repo.~~ Order v1.2 with Silkscreen text for BOOTSEL and RESET. Once received test and make photos.
-- [ ] ~~Order and test the v1.1 ESP32S3 board. (In v1.0 I forgot to add PullUp and PullDown in RST and SUSPEND CP2102). Ordered. Awaiting arrival.~~ TX and RX signals going into CP2102 were mixed. Fix it and order v1.2. Once received test and make photos.
-- [ ] Developing: nRF52840 Dongle, RP2350A (Pi Pico 2), and Pi Pico 2 2354B with extra functionalities
+- [ ] ~~Order and test the v1.1 RP2040 board. (In v1.0 I mixed some pins in the Flash and couldn't boot up). Ordered. Awaiting arrival. v1.1 is working correctly. Need to update photos and repo. Order v1.2 with Silkscreen text for BOOTSEL and RESET. Once received test and make photos.~~ RP2040 working correctly!
+- [ ] ~~Order and test the v1.1 ESP32S3 board. (In v1.0 I forgot to add PullUp and PullDown in RST and SUSPEND CP2102). Ordered. Awaiting arrival. TX and RX signals going into CP2102 were mixed. Fix it and order v1.2. Once received test and make photos.~~ ESP32S3 working correctly!
+- [ ] Developing: nRF52840 Dongle, RP2350A (Pi Pico 2), and Pi Pico 2 2354B with extra functionalities. Estimated time of production August 2026.
 - [ ] Investigate other possible microcontrollers/SOCs/FPGAs to implement.
 
 ## Acknowledgments
